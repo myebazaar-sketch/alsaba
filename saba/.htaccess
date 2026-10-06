@@ -1,0 +1,36 @@
+# Enable URL rewriting for pretty URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Route /article/slug to article.php?slug=slug
+  RewriteRule ^article/([^/]+)/?$ article.php?slug=$1 [L,QSA]
+
+  # Route /product/slug to product.php?slug=slug
+  RewriteRule ^product/([^/]+)/?$ product.php?slug=$1 [L,QSA]
+
+  # Route /blog to blog.php
+  RewriteRule ^blog/?$ blog.php [L,QSA]
+
+  # Route /faq to faq.php
+  RewriteRule ^faq/?$ faq.php [L,QSA]
+
+  # Serve existing files and directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback: send everything else to the front controller
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Security headers (optional if host supports mod_headers)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "DENY"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+DirectoryIndex index.php

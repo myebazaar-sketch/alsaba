@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Recommend the sitemap for crawlers
+Sitemap: https://alsabaspices.com/sitemap.xml
