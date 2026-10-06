@@ -289,16 +289,13 @@ seo_analytics();
     <section class="section media-section">
       <div class="section-heading">
         <p class="section-tag">Watch & Learn</p>
-        <h2>Recipe inspiration for refined kitchens</h2>
+        <h2>Latest from Al Saba Spices on YouTube</h2>
       </div>
       <div class="media-grid">
-        <div class="video-card">
-          <h3>Spice blending tips</h3>
-          <iframe src="https://www.youtube.com/embed/6Q8wAodM0iY" title="Indian spice cooking video" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <h3>Traditional Indian kitchen recipes</h3>
-          <iframe src="https://www.youtube.com/embed/5b0f0f7V2Q4" title="Traditional Indian kitchen recipe" loading="lazy" allowfullscreen></iframe>
+        <div class="video-card channel-playlist">
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUeVOScuF0ip9RK--NP3ab9A" title="Al Saba Spices YouTube channel uploads" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>New videos and Shorts from our YouTube channel appear in this playlist automatically.</p>
+          <a class="btn" href="https://www.youtube.com/@ALSabaSpices" target="_blank" rel="noopener noreferrer">Visit our YouTube channel</a>
         </div>
       </div>
     </section>

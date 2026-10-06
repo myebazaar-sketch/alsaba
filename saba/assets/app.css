@@ -412,6 +412,12 @@ main {
   border: 0;
 }
 
+.article-body iframe.blog-short-video {
+  width: min(100%, 400px);
+  aspect-ratio: 9 / 16;
+  min-height: 0;
+}
+
 .about-section {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(212, 175, 55, 0.12);
@@ -679,6 +685,13 @@ a.article-card {
   scroll-snap-align: start;
 }
 
+.channel-playlist {
+  flex: 1 1 100%;
+  min-width: 0;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
 .product-card,
 .article-card,
 .video-card,
@@ -878,6 +891,7 @@ a.article-card {
 
 .video-card iframe {
   width: 100%;
+  aspect-ratio: 16 / 9;
   min-height: 230px;
   border: 0;
   border-radius: 12px;

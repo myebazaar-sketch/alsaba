@@ -55,7 +55,7 @@ function renderArticleContent(string $content): string
     $allowedAttributes = [
         'a' => ['href', 'title', 'target', 'rel'],
         'img' => ['src', 'alt', 'title'],
-        'iframe' => ['src', 'title', 'allow', 'allowfullscreen', 'loading'],
+        'iframe' => ['src', 'title', 'allow', 'allowfullscreen', 'loading', 'class'],
     ];
 
     $html = '<div>' . $content . '</div>';
@@ -210,7 +210,15 @@ seo_analytics();
       <img loading="lazy" decoding="async" src="<?= htmlspecialchars($article['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?>">
       <h1><?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?></h1>
       <div class="article-body" style="margin-top: 1rem; color: var(--ink); line-height: 1.9;">
-        <?= renderArticleContent($article['content']) ?>
+        <?php
+        $articleContent = $article['content'];
+        if (isset($article['video'])) {
+            $articleContent .= '<iframe src="' . htmlspecialchars($article['video'], ENT_QUOTES, 'UTF-8')
+                . '" title="Al Saba Spices chicken powder Short" loading="lazy"'
+                . ' allowfullscreen="allowfullscreen" class="blog-short-video"></iframe>';
+        }
+        ?>
+        <?= renderArticleContent($articleContent) ?>
       </div>
       <p style="margin-top: 1.5rem;"><a class="btn" href="/">Back to home</a></p>
     </article>
