@@ -1130,6 +1130,17 @@ a.article-card {
   height: auto;
 }
 
+.related-articles {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--sand);
+}
+
+.related-articles > h2 {
+  color: var(--green);
+  text-align: center;
+}
+
 @media (max-width: 780px) {
   .product-page {
     grid-template-columns: 1fr;

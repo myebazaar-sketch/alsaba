@@ -79,7 +79,7 @@ function renderArticleContent(string $content): string
             foreach ($node->childNodes as $child) {
                 $fragment->appendChild($sanitizeNode($child));
             }
-            return $fragment;
+            return $fragment->hasChildNodes() ? $fragment : $doc->createTextNode('');
         }
 
         $element = $doc->createElement($tag);
@@ -148,12 +148,12 @@ $canonicalPath = '/article/' . rawurlencode((string) $article['slug']);
 <head>
 <?php
 seo_head([
-    'title'       => $article['title'] . ' – ' . $site['name'],
-    'description' => $article['text'],
+    'title'       => $article['seo_title'] ?? ($article['title'] . ' – ' . $site['name']),
+    'description' => $article['meta_description'] ?? $article['text'],
     'canonical'   => $canonicalPath,
     'type'        => 'article',
     'image'       => $article['image'],
-    'image_alt'   => $article['title'],
+    'image_alt'   => $article['image_alt'] ?? $article['title'],
     'keywords'    => ['Indian spices', 'recipes', $site['name']],
 ]);
 
@@ -207,7 +207,7 @@ seo_analytics();
 
   <main class="section" style="padding-top: 2rem; max-width: 840px; margin: 0 auto;">
     <article class="article-card" style="width: 100%; min-width: auto; height: auto;">
-      <img loading="lazy" decoding="async" src="<?= htmlspecialchars($article['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?>">
+      <img loading="lazy" decoding="async" src="<?= htmlspecialchars($article['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($article['image_alt'] ?? $article['title'], ENT_QUOTES, 'UTF-8') ?>">
       <h1><?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?></h1>
       <div class="article-body" style="margin-top: 1rem; color: var(--ink); line-height: 1.9;">
         <?php
@@ -219,7 +219,47 @@ seo_analytics();
         }
         ?>
         <?= renderArticleContent($articleContent) ?>
+
       </div>
+      <?php
+      $relatedSlugs = $article['related'] ?? [];
+      $moreFromBlog = [];
+      foreach ($relatedSlugs as $relatedSlug) {
+          foreach ($articles as $related) {
+              if ($related['slug'] === $relatedSlug && $related['slug'] !== $article['slug']) {
+                  $moreFromBlog[] = $related;
+                  break;
+              }
+          }
+          if (count($moreFromBlog) === 3) {
+              break;
+          }
+      }
+      if (count($moreFromBlog) < 3) {
+          foreach ($articles as $candidate) {
+              if ($candidate['slug'] !== $article['slug'] && !in_array($candidate['slug'], array_column($moreFromBlog, 'slug'), true)) {
+                  $moreFromBlog[] = $candidate;
+              }
+              if (count($moreFromBlog) === 3) {
+                  break;
+              }
+          }
+      }
+      if (!empty($moreFromBlog)):
+          ?>
+        <section class="related-articles" aria-labelledby="related-articles-title">
+          <h2 id="related-articles-title">More from the blog</h2>
+          <div class="blog-grid">
+            <?php foreach ($moreFromBlog as $moreArticle): ?>
+              <a class="article-card" href="/article/<?= rawurlencode((string) $moreArticle['slug']) ?>" aria-label="Read: <?= htmlspecialchars($moreArticle['title'], ENT_QUOTES, 'UTF-8') ?>">
+                <img loading="lazy" decoding="async" src="<?= htmlspecialchars($moreArticle['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($moreArticle['image_alt'] ?? $moreArticle['title'], ENT_QUOTES, 'UTF-8') ?>">
+                <h2><?= htmlspecialchars($moreArticle['title'], ENT_QUOTES, 'UTF-8') ?></h2>
+                <p><?= htmlspecialchars($moreArticle['text'], ENT_QUOTES, 'UTF-8') ?></p>
+              </a>
+            <?php endforeach; ?>
+          </div>
+        </section>
+      <?php endif; ?>
       <p style="margin-top: 1.5rem;"><a class="btn" href="/">Back to home</a></p>
     </article>
   </main>

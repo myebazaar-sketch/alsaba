@@ -308,7 +308,7 @@ seo_analytics();
       <div class="article-grid">
         <?php foreach ($articles as $article): ?>
           <a class="article-card" href="/article/<?= htmlspecialchars(rawurlencode($article['slug']), ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener" aria-label="Read article: <?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?>">
-            <img loading="lazy" decoding="async" src="<?= htmlspecialchars($article['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?>">
+            <img loading="lazy" decoding="async" src="<?= htmlspecialchars($article['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($article['image_alt'] ?? $article['title'], ENT_QUOTES, 'UTF-8') ?>">
             <h3><?= htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8') ?></h3>
             <p><?= htmlspecialchars($article['text'], ENT_QUOTES, 'UTF-8') ?></p>
           </a>

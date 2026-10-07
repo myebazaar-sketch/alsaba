@@ -104,7 +104,7 @@ seo_analytics();
     <div class="blog-grid">
       <?php foreach ($articles as $article): ?>
         <a class="article-card" href="/article/<?= seo_e(rawurlencode($article['slug'])) ?>" aria-label="Read: <?= seo_e($article['title']) ?>">
-          <img loading="lazy" decoding="async" src="<?= seo_e($article['image']) ?>" alt="<?= seo_e($article['title']) ?>">
+          <img loading="lazy" decoding="async" src="<?= seo_e($article['image']) ?>" alt="<?= seo_e($article['image_alt'] ?? $article['title']) ?>">
           <h2><?= seo_e($article['title']) ?></h2>
           <p><?= seo_e($article['text']) ?></p>
         </a>
