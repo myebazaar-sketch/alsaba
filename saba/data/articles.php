@@ -120,6 +120,68 @@ HTML,
         'video' => 'https://www.youtube-nocookie.com/embed/1POwdlg0zXE?si=VdIQBR3I0jiTLPrr',
         'image' => '/img/masala.png',
         'related' => ['halal-chicken-tastemaker', 'al-saba-spices-masala-chai', 'boring-meals-solved']
+    ],
+    [
+        'slug' => 'al-saba-chicken-chunks',
+        'title' => 'Al Saba Spices Chicken Chunks: A Crunchy New Way to Add Real Chicken Flavour to Your Favourite Food',
+        'text' => 'A crunchy, chicken-rich ingredient to bring real chicken flavour and bite to pulao, noodles, pasta, curry and quick meals.',
+        'seo_title' => 'Al Saba Chicken Chunks for Pulao, Noodles & Pasta | Al Saba Spices',
+        'meta_description' => 'Discover Al Saba Chicken Chunks — a crunchy, real-chicken ingredient made to bring extra flavour and texture to pulao, noodles, pasta and everyday cooking.',
+        'image_alt' => 'Crunchy chicken chunks for pulao, noodles and pasta',
+        'content' => <<<'HTML'
+<p>Have you ever cooked chicken pulao, noodles or pasta and felt that the dish was missing something? The flavour was there, the spices were right, but the texture and chicken bite just were not.</p>
+<p>That is exactly the problem we wanted to solve at <strong>Al Saba Spices</strong>.</p>
+<p>Introducing <strong>Al Saba Chicken Chunks</strong> — dried, crunchy chicken pieces built to bring real chicken flavour and texture to your favourite meals.</p>
+<h2>The Idea Behind Chicken Chunks</h2>
+<p>We already had Chicken Powder for customers who wanted that rich chicken taste in their dishes. But the feedback we kept hearing was clear: people wanted more than flavour.</p>
+<p>They wanted the experience of real chicken pieces — something they could bite into, chew, and enjoy.</p>
+<p>So we set out to create a product that combines convenience with texture. A simple ingredient that could give your food more depth without making cooking complicated.</p>
+<p>After months of testing, refining and listening to customer feedback, Chicken Chunks became our answer.</p>
+<h2>What Makes Them Different?</h2>
+<p>Our Chicken Chunks are made with a balanced blend of:</p>
+<ul>
+  <li><strong>80% real chicken</strong></li>
+  <li><strong>20% besan and spices</strong></li>
+</ul>
+<p>This combination gives the chunks their crunchy bite and rich chicken flavour. They are dried for convenience and designed to be easy to store, easy to use and easy to love.</p>
+<p>Whether you want to add texture to a family rice dish or boost a quick noodle meal, these chunks are made for everyday cooking.</p>
+<h2>Easy Ways to Use Them</h2>
+<p>These are not limited to one type of recipe. In fact, they are meant to be flexible.</p>
+<h3>Chicken Pulao and Biryani</h3>
+<p>Mix them into your pulao or biryani for extra chicken flavour and a satisfying bite in every spoonful.</p>
+<h3>Noodles and Hakka Noodles</h3>
+<p>Add them while cooking noodles for a richer, more satisfying result that feels closer to restaurant-style chicken noodles.</p>
+<h3>Pasta</h3>
+<p>Whether you prefer white sauce, red sauce or a creamy chicken pasta, Chicken Chunks add a new layer of texture and taste.</p>
+<h3>Gravies and Curries</h3>
+<p>They also work beautifully in gravies and curries, helping create a fuller, more complete flavour profile.</p>
+<h3>Quick Snack</h3>
+<p>Some people enjoy them straight from the pack as a crunchy, savoury bite. It is a simple, satisfying way to enjoy the taste without any extra preparation.</p>
+<p>Always follow the product’s preparation and storage instructions.</p>
+<h2>Chicken Powder or Chicken Chunks?</h2>
+<p>Both products have their place in the kitchen.</p>
+<p><strong>Chicken Powder</strong> is ideal when you want a quick chicken flavour boost. <strong>Chicken Chunks</strong> go one step further by adding real texture and a more satisfying bite.</p>
+<p>They can even be used together if you want to build a richer, deeper chicken profile in one dish.</p>
+<h2>Why Choose Al Saba Chicken Chunks?</h2>
+<ul>
+  <li>Made with 80% real chicken</li>
+  <li>Crunchy, savoury texture</li>
+  <li>Convenient dried format for storage</li>
+  <li>Works in pulao, noodles, pasta and curries</li>
+  <li>Developed after months of research and customer feedback</li>
+</ul>
+<h2>A Simple Way to Upgrade Everyday Meals</h2>
+<p>At Al Saba Spices, we love creating ingredients that make home cooking more exciting without making it complicated.</p>
+<p>Chicken Chunks are exactly that: a simple product with a big difference. Whether you are preparing a quick weekday meal or cooking for the family, they bring a new kind of flavour and texture to the table.</p>
+<p>If you want to make your dishes more satisfying and more memorable, give them a try.</p>
+<p><strong>Ready to add more flavour to your kitchen?</strong></p>
+<p>Order directly from Amazon:</p>
+<p><a href="https://link.amazon/B0iWjZMLE">Buy Al Saba Spices Chicken Chunks on Amazon</a></p>
+<p><img src="/img/Gemini_Generated_Image_bjxa3objxa3objxa-i-need-the-model-in-the-poster-user-her-and-dont-p.jpg" alt="Al Saba Spices Chicken Chunks poster" class="blog-image" /></p>
+<p><strong>Al Saba Spices – Adding More Flavour to Everyday Cooking!</strong></p>
+HTML,
+        'image' => '/img/image_20261103_133936.jpg',
+        'related' => ['halal-chicken-tastemaker', 'boring-meals-solved', 'sabut-garam-masala-whole-spices-guide']
     ]
 ];
 

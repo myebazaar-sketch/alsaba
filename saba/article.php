@@ -55,7 +55,7 @@ function renderArticleContent(string $content): string
     $allowedAttributes = [
         'a' => ['href', 'title', 'target', 'rel'],
         'img' => ['src', 'alt', 'title'],
-        'iframe' => ['src', 'title', 'allow', 'allowfullscreen', 'loading', 'class'],
+        'iframe' => ['src', 'title', 'allow', 'allowfullscreen', 'loading', 'class', 'referrerpolicy'],
     ];
 
     $html = '<div>' . $content . '</div>';
@@ -214,7 +214,9 @@ seo_analytics();
         $articleContent = $article['content'];
         if (isset($article['video'])) {
             $articleContent .= '<iframe src="' . htmlspecialchars($article['video'], ENT_QUOTES, 'UTF-8')
-                . '" title="Al Saba Spices chicken powder Short" loading="lazy"'
+                . '" title="' . htmlspecialchars($article['title'], ENT_QUOTES, 'UTF-8')
+                . '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"'
+                . ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"'
                 . ' allowfullscreen="allowfullscreen" class="blog-short-video"></iframe>';
         }
         ?>

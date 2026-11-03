@@ -27,6 +27,16 @@ return [
         'buyUrl'   => 'https://www.meesho.com/halal-chicken-broth-soup-powder-50gm-mix-with-spices-and-vegetable-60-chicken/p/gl4byi?ms=2&source=Meri+Shop',
     ],
     [
+        'slug'     => 'halal-chicken-chunks',
+        'name'     => 'Halal Chicken Chunks – Crunchy Chicken',
+        'desc'     => 'Crunchy dried chicken chunks for pulao, noodles, pasta and more.',
+        'detail'   => 'Made with 80% chicken and 20% besan and spices. Add a crunchy chicken bite to your favourite meals.',
+        'image'    => '/img/Crunchy%20Chicken%20Chunks%20Spice%20Jar.png',
+        'price'    => '₹249/-',
+        'keywords' => ['halal chicken chunks', 'crunchy chicken chunks', 'dried chicken chunks'],
+        'buyUrl'   => 'https://link.amazon/B0iWjZMLE',
+    ],
+    [
         'slug'     => 'imli-chatni-powder',
         'name'     => 'IMLI Chatni Powder',
         'desc'     => 'Bold heat with tangy flavor.',

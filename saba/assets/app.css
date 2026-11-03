@@ -622,8 +622,22 @@ main {
   margin-bottom: 1rem;
 }
 
+article.article-card > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+}
+
 .article-body img {
   height: auto;
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
 }
 
 .article-grid {

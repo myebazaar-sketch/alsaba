@@ -293,7 +293,7 @@ seo_analytics();
       </div>
       <div class="media-grid">
         <div class="video-card channel-playlist">
-          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUeVOScuF0ip9RK--NP3ab9A" title="Al Saba Spices YouTube channel uploads" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUeVOScuF0ip9RK--NP3ab9A" title="Al Saba Spices YouTube channel uploads" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <p>New videos and Shorts from our YouTube channel appear in this playlist automatically.</p>
           <a class="btn" href="https://www.youtube.com/@ALSabaSpices" target="_blank" rel="noopener noreferrer">Visit our YouTube channel</a>
         </div>
